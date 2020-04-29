@@ -1,0 +1,28 @@
+html body {background-color:cyan ; margin: 0;}
+header {
+    background-image: url('../images/barner.jpg');
+    border-top: red solid 1em;
+    position: relative;top: 0;
+    min-width: 100%; display: flex; flex-direction: column !important;
+
+}
+.title {display: flex !important;flex: 1;}
+nav {
+    flex: 1;
+}
+#logo {flex: 1; order: 1;}
+#pagetitle {flex: 6; order: 2; margin: auto;}
+main {position: relative; top: 10px; display: flex;}
+.content {flex: 4; order: 2;}
+.sidebar {flex: 1; order: 1; background-color: beige; box-shadow: black;}
+a {
+    text-decoration: none; font-weight: bold; font-size: 1em; color: black; padding-right: 2em;
+}
+a:hover {color: pink;}
+header ul li {
+    display: inline;
+}
+#logo img {max-width: 100px; max-height: 100px;}
+footer {font: bolder; color: white; align-items: center; position: fixed; bottom: 0px;
+    background-color: blue; min-width: 100%;
+}

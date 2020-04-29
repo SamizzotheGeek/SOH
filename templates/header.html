@@ -1,0 +1,14 @@
+<div class="title">
+        {% load static %}
+    <span id="logo"><img src="{% static 'images/logo.png' %}" alt="sheave of hope logo"></span>
+    <span id="pagetitle"><h2>{{site}}{{page}}</h2></span>
+</div>
+<nav>
+    <ul>
+        <li><a href="{% url 'sohf:index' %}">Home</a></li>
+        <li><a href="{% url 'sohf:about' %}">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Get in Touch</a></li>
+    </ul>
+</nav>

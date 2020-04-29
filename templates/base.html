@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {%endblock%}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+</head>
+<body>
+        <header>{%include 'header.html' %}</header>
+        <main>
+            <div class="content">
+                {% block content %}{%endblock%}
+            </div>
+            <div class="sidebar">
+                <div class="recent">
+                    <h3>Recent Event</h3>
+                    {% if recent_event_list %} 
+                    <ul> 
+                        {% for event in recent_event_list %} 
+                        <li><a href="#">{{events.event_name}}</a></li>
+                        {% endfor %} 
+                    </ul> 
+                    {% else %} <p>{{recent}}No recent events are available.</p> {% endif %}
+                </div>
+                <iframe src="https://twiter.com/sheaves_of_hope" frameborder="0">Twiter Feeds</iframe>
+            </div>
+
+        </main>
+        <footer>{% include 'footer.html'%}</footer>
+    
+</body>
+</html>
